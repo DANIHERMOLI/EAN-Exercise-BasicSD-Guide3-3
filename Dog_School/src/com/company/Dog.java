@@ -1,13 +1,12 @@
 package com.company;
 
 public class Dog {
+    private Owner newOwner = new Owner();
     private String dogName;
     private String dogRace;
     private String dogLocation;
-    private String ownersID;
-    private String ownersName;
-    private String contactNumber;
     private String assistanceDay;
+
 
     public Dog() {
         this("default name", "no race", "no location",
@@ -19,9 +18,9 @@ public class Dog {
         this.dogName = dogName;
         this.dogRace = dogRace;
         this.dogLocation = dogLocation;
-        this.ownersID = ownersID;
-        this.ownersName = ownersName;
-        this.contactNumber = contactNumber;
+        newOwner.setOwnersID(ownersID);
+        newOwner.setOwnersName(ownersName);
+        newOwner.setContactNumber(contactNumber);
         this.assistanceDay = assistanceDay;
     }
 
@@ -50,27 +49,27 @@ public class Dog {
     }
 
     public String getOwnersID() {
-        return ownersID;
+        return newOwner.getOwnersID();
     }
 
     public void setOwnersID(String ownersID) {
-        this.ownersID = ownersID;
+        newOwner.setOwnersID(ownersID);
     }
 
     public String getOwnersName() {
-        return ownersName;
+        return newOwner.getOwnersName();
     }
 
     public void setOwnersName(String ownersName) {
-        this.ownersName = ownersName;
+        newOwner.setOwnersName(ownersName);
     }
 
     public String getContactNumber() {
-        return contactNumber;
+        return newOwner.getContactNumber();
     }
 
     public void setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
+        newOwner.setContactNumber(contactNumber);
     }
 
     public String getAssistanceDay() {
@@ -86,9 +85,9 @@ public class Dog {
         return ("Dog's Name: " + this.dogName + "\n" +
         "Dog's Race: " + this.dogRace + "\n" +
         "Dog's Location: " + this.dogLocation + "\n" +
-        "Owner's ID: " + this.ownersID + "\n" +
-        "Owner's Name: " + this.ownersName + "\n" +
-        "Contact Number: " + this.contactNumber + "\n" +
+        "Owner's ID: " + getOwnersID() + "\n" +
+        "Owner's Name: " + getOwnersName() + "\n" +
+        "Contact Number: " + getContactNumber() + "\n" +
         "Day of Assistance: " + this.assistanceDay);
     }
 }
