@@ -19,25 +19,25 @@ public class Main {
         ArrayList<Dog> dogList = new ArrayList<>();
         String search;
         boolean exit = false;
-        dogList.add(new Dog());
-        dogList.add(new Dog("sif", "race 1", "location 1",
-                "154354-15238", "sergio guzman", "+57 305 000 0000", "monday"));
-        dogList.add(new Dog("pluto", "race 2", "location 1",
-                "9876-481318", "mickey mouse", "+1 999 000 0000", "wednesday"));
-        dogList.add(new Dog("vagabundo", "race 1", "location 2",
-                "no owner", "no owner name", "no contact number", "friday"));
+//        dogList.add(new Dog());
+//        dogList.add(new Dog("sif", "race 1", "location 1",
+//                "154354-15238", "sergio guzman", "+57 305 000 0000", "monday"));
+//        dogList.add(new Dog("pluto", "race 2", "location 1",
+//                "9876-481318", "mickey mouse", "+1 999 000 0000", "wednesday"));
+//        dogList.add(new Dog("vagabundo", "race 1", "location 2",
+//                "no owner", "no owner name", "no contact number", "friday"));
 
         System.out.println("\n#################################");
         System.out.println("Welcome to the EAN Guide 3 Act. 3");
         System.out.println("#################################");
         System.out.println("------------Dog's list-----------\n");
-        if(dogList.size() == 0) {
-            System.out.println("The list is empty.");
-            System.out.println("Please add a dog to the list.\n");
-            dogList.add(init());
-            System.out.println();
-        } else {
-            do {
+        do {
+            if(dogList.size() == 0) {
+                System.out.println("The list is empty.");
+                System.out.println("Please add a dog to the list.\n");
+                dogList.add(init());
+                System.out.println();
+            } else {
                 switch (menu()) {
                     case 1:
                         dogList.add(init());
@@ -81,8 +81,8 @@ public class Main {
                         System.out.println("You shouldn't see this message");
                         break;
                 }
-            } while(!exit);
-        }
+            }
+        }while(!exit);
         System.out.println("Exiting app.");
         Thread.sleep(2500);
     }
