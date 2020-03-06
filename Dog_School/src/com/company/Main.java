@@ -19,14 +19,6 @@ public class Main {
         ArrayList<Dog> dogList = new ArrayList<>();
         String search;
         boolean exit = false;
-        dogList.add(new Dog());
-        dogList.add(new Dog("sif", "race 1", "location 1",
-                "154354-15238", "sergio guzman", "+57 305 000 0000", "monday"));
-        dogList.add(new Dog("pluto", "race 2", "location 1",
-                "9876-481318", "mickey mouse", "+1 999 000 0000", "wednesday"));
-        dogList.add(new Dog("vagabundo", "race 1", "location 2",
-                "no owner", "no owner name", "no contact number", "friday"));
-
         System.out.println("\n#################################");
         System.out.println("Welcome to the EAN Guide 3 Act. 3");
         System.out.println("#################################");
