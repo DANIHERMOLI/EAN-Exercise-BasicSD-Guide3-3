@@ -3,7 +3,7 @@
  @description    :This is the solution to the third guide of software development activity 3
  @author         :Sergio Guzman @ sgioguzman@gmail.com
  @date           :2020-03-03
- @version        :1.0
+ @version        :2.0
  @usage          :java Main.java
  ==================================================================================================================
  */
@@ -97,15 +97,8 @@ public class Main {
     private static Dog dogFinder () {
         String name;
         Dog currentDog = null;
-        do {
-            System.out.println("Name of the dog.");
-            try {
-                name = input.nextLine();
-                break;
-            } catch (Exception e) {
-                System.out.println("ERROR: Invalid data type.\n");
-            }
-        } while(true);
+        System.out.println("Name of the dog.");
+        name = input.nextLine();
         for(Dog dog : dogList) {
             if(dog.getDogName().equalsIgnoreCase(name)) {
                 currentDog = dog;
